@@ -4,13 +4,17 @@ let destination = prompt("Введите страну доставки");
 if (destination === null) {
   console.log("Отмененно пользователем");
 }
+else if (destination === "") {
+ alert("Ошибка! Ничего не введено!");
+} 
 
+else {
 let country = destination[0].toUpperCase() + destination.slice(1, 9).toLowerCase();
 
 switch (country) {
-  case "":
+  /*case "":
     alert("Ошибка! Ничего не введено!");
-    break;
+    break;*/
 
   case "Китай":
     cost = 100;
@@ -43,3 +47,4 @@ switch (country) {
 let message = `Доставка в ${country} будет стоить ${cost} кредитов`;
 
 console.log(message);
+} 
